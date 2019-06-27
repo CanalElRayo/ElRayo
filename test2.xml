@@ -1,142 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
 <item>
-<title>[COLOR yellowgreen]13tv01[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_13tv01.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/13tv_01_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
+<title>[COLOR lime]•[/COLOR][COLOR deepskyblue]  [B]Television [COLOR skyblue]24/7[/COLOR][/B][/COLOR] [COLOR lightslategray] r Back! [/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
 
-<item>
-<title>[COLOR yellowgreen]alicization[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_alicization.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/alicization_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
+<title>[makelist.param2]</title>
+<link>rtmp://$doregex[get_ip]/live?$doregex[get_key] app=live?$doregex[get_key] playpath=live_[makelist.param1]  swfUrl=http://vaughnlive.tv$doregex[get_channel] pageUrl=http://vaughnlive.tv/[makelist.param1]  live=true</link>
+<regex>
+<name>get_ip</name>
+<expres>([^;]*?);:</expres>    
+<page>http://mvn.vaughnsoft.net/video/edge/vmn-live_[makelist.param1]?0.1.1.765_551-551-0.3609892260283232</page>                               
+<referer>http://vaughnlive.tv/</referer>
+<connection>keep-alive</connection>
+<agent>Mozilla/5.0</agent>
+<accept>Accept-Encoding=gzip,deflate,text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</accept>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>get_key</name>
+<expres>mvnkey-(.*?);</expres>  
+<page>http://mvn.vaughnsoft.net/video/edge/vmn-live_[makelist.param1]?0.1.1.765_551-551-0.3609892260283232</page>                               
+<referer>http://vaughnlive.tv/</referer>
+<connection>keep-alive</connection>
+<agent>Mozilla/5.0</agent>
+<accept>Accept-Encoding=gzip,deflate,text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</accept>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>get_key2</name>
+<expres>;.*;(.*?)</expres>  
+<page>http://mvn.vaughnsoft.net/video/edge/vmn-live_[makelist.param1]?0.1.1.765_551-551-0.3609892260283232</page>                               
+<referer>http://vaughnlive.tv/</referer>
+<connection>keep-alive</connection>
+<agent>Mozilla/5.0</agent>
+<accept>Accept-Encoding=gzip,deflate,text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</accept>
+<cookieJar></cookieJar>
+</regex>
 
-<item>
-<title>[COLOR yellowgreen]animejapan[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_animejapan.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/animejapan_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
+_psn12v?
 
-<item>
-<title>[COLOR yellowgreen]beto7[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_beto_7.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/beto_7_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
 
-<item>
-<title>[COLOR yellowgreen]beto12[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_beto_12.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/beto_12_320.jpg</thumbnail>
-<fanart></fanart>
+<regex>
+<name>get_channel</name>
+<expres>embedSWF\(\"(.*?)"</expres>    
+<page>http://vaughnlive.tv/[makelist.param1]</page>                             
+<referer>http://vaughnlive.tv/</referer>
+<connection>keep-alive</connection>
+<agent>Mozilla/5.0</agent>
+<accept>Accept-Encoding=gzip,deflate,text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</accept>
+<cookieJar></cookieJar>
+</regex>
+			<thumbnail>http://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/[makelist.param2]_320.jpg</thumbnail>
+]]></listrepeat>
+<expres>a href="/(.*?)"[\w\W\s]{0,22}browseTxt">(.*?)<</expres>
+<page>http://vaughnlive.tv/browse/espanol</page>
+<agent>Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5</agent>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail>https://cadenaser00.epimg.net/emisora/imagenes/2018/03/20/radio_zaragoza/1521546729_359055_1521552567_noticia_normal.jpg</thumbnail>
 </item>
-
-<item>
-<title>[COLOR yellowgreen]cienciaficcion01[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_cienciaficcion01.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/cienciaficcion01_320.jpg</thumbnail>
-<fanart></fanart>
 </item>
-
-<item>
-<title>j[COLOR yellowgreen]juan13tv[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_juan_13tv.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/juan_13tv_12_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
-
-<item>
-<title>[COLOR yellowgreen]katyhd[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_katyhd.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/katyhd_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
-
-<item>
-<title>[COLOR yellowgreen]kazunori[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_kazunori.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/kazunori_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
-
-<item>
-<title>[COLOR yellowgreen]luzclarita2[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_luzclarita2.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/luzclarita2_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
-
-<item>
-<title>[COLOR yellowgreen]megaanime[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_mega_anime.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/mega_anime_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
-
-<item>
-<title>[COLOR yellowgreen]megachavo[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_mega_chavo.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/mega_chavo_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
-
-<item>
-<title>[COLOR yellowgreen]megaseries[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_mega_serieshd1.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/mega_serieshd1_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
-
-<item>
-<title>[COLOR yellowgreen]peliculasmania[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_peliculas_mania.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/peliculas_mania_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
-
-<item>
-<title>[COLOR yellowgreen]queenmovies[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_Queen_movies.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/Queen_movies_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
-
-<item>
-<title>[COLOR yellowgreen]telemun[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_06series00.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/06series00_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
-
-<item>
-<title>[COLOR yellowgreen]terrormania[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_terrormania.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/terror_mania_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
-
-<item>
-<title>[COLOR yellowgreen]zonafilmsterror[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_zonafilmsterror.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/zonafilmsterror_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
-
-<item>
-<title>[COLOR yellowgreen]zonafilmstvseries[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_zonafilmstvseries.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/zonafilmstvseries_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
-
-<item>
-<title>[COLOR yellowgreen]heartradio[/COLOR]</title>
-<urlsolve>https://mp4v.vaughnsoft.net/play/live_heartradio.flv?viewers=true&watermark=left&autoplay=true</urlsolve>
-<thumbnail>https://cdn.vaughnsoft.com/vaughnsoft/vaughn/img_profiles/heartradio_320.jpg</thumbnail>
-<fanart></fanart>
-</item>
-
