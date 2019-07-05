@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<item>
+<tilte>[COLOR skyblue]24/7[/COLOR]</title>
+<link>$doregex[makelist]</link>
+<urlsolve>http://vaughnlive.tv/browse/espanol</ulrsolve>
+<thumbnail>https://vaughnlive.tv/img/vaughnlive_header.png</thumbnail>
+<regex>
+<name>getdecoded</name>
+<expres>a href="/(.*?)"[\w\W\s]{0,22}browseTxt">(.*?)<</expres>
+<page>http://vaughnlive.tv/browse/espanol</page>
+</regex>
+</item>
